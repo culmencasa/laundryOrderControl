@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/Libs/bin/Debug
+/packages
+/UHF.SDK/bin/Debug
+/UHF.SDK/obj/Debug
+/UHFManager/bin/Debug
+/UHFManager/obj/Debug
+/Libs/.vs/DLL/v15

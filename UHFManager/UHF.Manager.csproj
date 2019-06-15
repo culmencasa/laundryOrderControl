@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A24C710-E91B-448F-B213-E9F906499DD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UHFManager</RootNamespace>
+    <AssemblyName>UHFManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>laundry.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IPAddressControlLib">
+      <HintPath>..\Libs\IPAddressControlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.4\lib\net40-client\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Windows.Forms.4.2.3\lib\net35\NLog.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.CodeFirst, Version=1.5.2.28, Culture=neutral, PublicKeyToken=eb96ba0a78d831a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.CodeFirst.1.5.2.28\lib\net40\SQLite.CodeFirst.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\MessageBoxHelper.cs" />
+    <Compile Include="Common\Conversion.cs" />
+    <Compile Include="DataContext\BusinessService.cs" />
+    <Compile Include="DataContext\DeviceSettingService.cs" />
+    <Compile Include="DataContext\GlobalDbContext.cs" />
+    <Compile Include="DataContext\GlobalDbInitializer.cs" />
+    <Compile Include="DataModel\DeviceSetting.cs" />
+    <Compile Include="DataModel\DeviceUsage.cs" />
+    <Compile Include="DataModel\EntityBase.cs" />
+    <Compile Include="DTO\BagOrderRequest.cs" />
+    <Compile Include="DTO\BagOrderResponse.cs" />
+    <Compile Include="DTO\FactoryReceiveBagOrdersRequest.cs" />
+    <Compile Include="DTO\FactoryReceiveBagOrdersResponse.cs" />
+    <Compile Include="DTO\MemberReceiveBagOrderRequest.cs" />
+    <Compile Include="DTO\MemberReceiveBagOrderResponse.cs" />
+    <Compile Include="Interface\IDeviceForm.cs" />
+    <Compile Include="POCO\OrderTag.cs" />
+    <Compile Include="DTO\RecorganizationBagOrderResponse.cs" />
+    <Compile Include="DTO\RecorganizationBagOrderRequest.cs" />
+    <Compile Include="DTO\RequestBase.cs" />
+    <Compile Include="DTO\ResponseBase.cs" />
+    <Compile Include="DTO\SplitBagOrderRequest.cs" />
+    <Compile Include="DTO\SplitBagOrderResponse.cs" />
+    <Compile Include="DTO\UpdateBagOrderItemStatusRequest.cs" />
+    <Compile Include="DTO\UpdateBagOrderItemStatusResponse.cs" />
+    <Compile Include="DTO\UpdateQuiltOrderStatusRequest.cs" />
+    <Compile Include="DTO\UpdateQuiltOrderStatusResponse.cs" />
+    <Compile Include="Forms\EnterWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterWarehouseForm.Designer.cs">
+      <DependentUpon>EnterWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExWarehouseForm.Designer.cs">
+      <DependentUpon>ExWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Helper.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderSplitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderSplitForm.Designer.cs">
+      <DependentUpon>OrderSplitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POCO\SubTaskItem.cs" />
+    <Compile Include="POCO\TaskStatesEnum.cs" />
+    <Compile Include="POCO\DeviceUsageEnum.cs" />
+    <Compile Include="POCO\MemAddress.cs" />
+    <Compile Include="POCO\MemBank.cs" />
+    <Compile Include="POCO\MemLength.cs" />
+    <Compile Include="POCO\TaskItem.cs" />
+    <Compile Include="POCO\Zone.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REST\RestInterfaceAccess.cs" />
+    <Compile Include="Forms\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SV.cs" />
+    <Compile Include="POCO\DeviceProxy.cs" />
+    <Compile Include="Forms\DryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DryForm.Designer.cs">
+      <DependentUpon>DryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WashingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WashingForm.Designer.cs">
+      <DependentUpon>WashingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\EnterWarehouseForm.resx">
+      <DependentUpon>EnterWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExWarehouseForm.resx">
+      <DependentUpon>ExWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderSplitForm.resx">
+      <DependentUpon>OrderSplitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WashingForm.resx">
+      <DependentUpon>WashingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DryForm.resx">
+      <DependentUpon>DryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\TestClass.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UHF.SDK\UHF.SDK.csproj">
+      <Project>{d7426df9-53ae-465e-b295-6dca9e5ef051}</Project>
+      <Name>UHF.SDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="laundry.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net40\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net40\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

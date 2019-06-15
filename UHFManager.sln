@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHF.Manager", "UHFManager\UHF.Manager.csproj", "{9A24C710-E91B-448F-B213-E9F906499DD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UHF.SDK", "UHF.SDK\UHF.SDK.csproj", "{D7426DF9-53AE-465E-B295-6DCA9E5EF051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A24C710-E91B-448F-B213-E9F906499DD3}.Release|x86.Build.0 = Release|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7426DF9-53AE-465E-B295-6DCA9E5EF051}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D214A34C-E35B-430A-99E0-0E311222BBD3}
+	EndGlobalSection
+EndGlobal
